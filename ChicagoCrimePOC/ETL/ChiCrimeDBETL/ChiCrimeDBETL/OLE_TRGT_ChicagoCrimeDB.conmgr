@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="OLE_TRGT_ChicagoCrimeDB"
+  DTS:DTSID="{607170FF-CB34-48E6-8D81-080160D60AAD}"
+  DTS:CreationName="OLEDB">
+  <DTS:PropertyExpression
+    DTS:Name="InitialCatalog">@[$Project::DatabaseName]</DTS:PropertyExpression>
+  <DTS:PropertyExpression
+    DTS:Name="Password">@[$Project::ChiCrimeETLUserPassword]</DTS:PropertyExpression>
+  <DTS:PropertyExpression
+    DTS:Name="ServerName">@[$Project::InstanceName]</DTS:PropertyExpression>
+  <DTS:PropertyExpression
+    DTS:Name="UserName">@[$Project::ChiCrimeETLUserName]</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=localhost;User ID=ETL_User;Initial Catalog=ChicagoCrime;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA3UP2S47qmky0C7D02LhRGQAAAAACAAAAAAADZgAAwAAAABAAAAAaDYQciBP+do8+uzyibic2AAAAAASAAACgAAAAEAAAAKFHpvCarG8S9KPUf1zMKeN4AAAAfueaygSdY/Y6NuH+zkVihohzfFkc7TiMSoxzyK6NSRXOTKXeQrG5ByzQTEXwmAAc21xAYZG4wW6+Dhchwkhw+798m+9n3vCss4/ACi4YTaEkI+g+HPpR3cOvLz2SzExf+i1UBJZQiBTmvntprVmJk4YuH2HQ/81QFAAAAA3+esf6En2w9puf3sjjFfqPrpvI</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
